@@ -3,8 +3,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "prettier:check": "npx prettier --check resources/",
-    "prettier:format": "npx prettier --write resources/"
+    "prettier:check": "prettier --check resources/",
+    "prettier:format": "prettier --write resources/"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
