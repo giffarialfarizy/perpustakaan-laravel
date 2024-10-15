@@ -61,6 +61,7 @@ pnpm run build
 - Basis data: [MySQL](https://www.mysql.com/)
 - Templating: [Laravel Blade](https://laravel.com/docs/10.x/blade)
 - Framework CSS: [Tailwind CSS](https://tailwindcss.com/)
+- UI component library: [Flowbite](https://flowbite.com/)
 
 ## Teknologi Pendukung
 
