@@ -6,6 +6,6 @@ class PublicController extends Controller
 {
   public function viewHome()
   {
-      return view('home');
+      return view('index');
   }
 }
