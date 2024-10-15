@@ -7,60 +7,70 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Ringkasan Proyek
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Proyek ini merupakan proyek akhir (_final project_) karya dari [Giffari Alfarizy](https://www.linkedin.com/in/giffari-alfarizy/) dalam bootcamp Laravel batch ke-60 yang diselenggarakan oleh [sanbercode](https://sanbercode.com/). Dalam proyek ini dibuat website perpustakaan yang di dalamnya terdapat buku yang dapat dipinjam, peminjam, admin perpustakaan, dan kegiatan pinjam-meminjam buku itu sendiri.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Scripts
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Untuk memulai proyek dalam development mode
 
-## Learning Laravel
+- Install _dependencies_
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```console
+pnpm run install
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- Memulai proyek Vite di _local_
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```console
+pnpm run dev
+```
 
-## Laravel Sponsors
+- Memulai proyek Laravel di _local_
+  - Buka XAMPP
+  - Start Apache
+  - Start MySQL
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```console
+php artisan serve
+```
 
-### Premium Partners
+Mengecek format kode pada folder _resources_
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+```console
+pnpm run prettier:check
+```
 
-## Contributing
+Menjalankan format kode pada folder _resources_
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```console
+pnpm run prettier:format
+```
 
-## Code of Conduct
+Melakukan build Tailwind CSS dan keperluan frontend lainnya
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```console
+pnpm run build
+```
 
-## Security Vulnerabilities
+## Teknologi Utama
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Bahasa pemrograman: [PHP](https://www.php.net/)
+- Framework PHP: [Laravel 10](https://laravel.com/docs/10.x/)
+- Basis data: [MySQL](https://www.mysql.com/)
+- Templating: [Laravel Blade](https://laravel.com/docs/10.x/blade)
+- Framework CSS: [Tailwind CSS](https://tailwindcss.com/)
 
-## License
+## Teknologi Pendukung
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Formatter untuk folder `resources`: [Prettier](https://prettier.io/)
+- Pendukung formatter untuk Blade: [Prettier Plugin Blade](https://www.npmjs.com/package/prettier-plugin-blade)
+- Pendukung formatter untuk Tailwind CSS: [Prettier Plugin Tailwind CSS](https://www.npmjs.com/package/prettier-plugin-tailwindcss/v/0.0.0-insiders.d539a72)
+- Formatter untuk file PHP: [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
+- Package manager untuk Node.js: [pnpm](https://pnpm.io/)
+
+## Referensi
+
+- Materi Bootcamp Laravel Sanbercode
+- [How to set up Prettier On a Laravel App, Linting Tailwind Class Order and More](https://mattstauffer.com/blog/how-to-set-up-prettier-on-a-laravel-app-to-lint-tailwind-class-order-and-more/)
