@@ -11,6 +11,23 @@
 
 Proyek ini merupakan proyek akhir (_final project_) karya dari [Giffari Alfarizy](https://www.linkedin.com/in/giffari-alfarizy/) dalam bootcamp Laravel batch ke-60 yang diselenggarakan oleh [sanbercode](https://sanbercode.com/). Dalam proyek ini dibuat website perpustakaan yang di dalamnya terdapat buku yang dapat dipinjam, peminjam, admin perpustakaan, dan kegiatan pinjam-meminjam buku itu sendiri.
 
+## Teknologi Utama
+
+- Bahasa pemrograman: [PHP](https://www.php.net/)
+- Framework PHP: [Laravel 10](https://laravel.com/docs/10.x/)
+- Basis data: [MySQL](https://www.mysql.com/)
+- Templating: [Laravel Blade](https://laravel.com/docs/10.x/blade)
+- Framework CSS: [Tailwind CSS](https://tailwindcss.com/)
+- UI component library: [Flowbite](https://flowbite.com/)
+
+## Teknologi Pendukung
+
+- Formatter untuk folder `resources`: [Prettier](https://prettier.io/)
+- Pendukung formatter untuk Blade: [Prettier Plugin Blade](https://www.npmjs.com/package/prettier-plugin-blade)
+- Pendukung formatter untuk Tailwind CSS: [Prettier Plugin Tailwind CSS](https://www.npmjs.com/package/prettier-plugin-tailwindcss/v/0.0.0-insiders.d539a72)
+- Formatter untuk file PHP: [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
+- Package manager untuk Node.js: [pnpm](https://pnpm.io/)
+
 ## Scripts
 
 Untuk memulai proyek dalam development mode
@@ -53,23 +70,6 @@ Melakukan build Tailwind CSS dan keperluan frontend lainnya
 ```console
 pnpm run build
 ```
-
-## Teknologi Utama
-
-- Bahasa pemrograman: [PHP](https://www.php.net/)
-- Framework PHP: [Laravel 10](https://laravel.com/docs/10.x/)
-- Basis data: [MySQL](https://www.mysql.com/)
-- Templating: [Laravel Blade](https://laravel.com/docs/10.x/blade)
-- Framework CSS: [Tailwind CSS](https://tailwindcss.com/)
-- UI component library: [Flowbite](https://flowbite.com/)
-
-## Teknologi Pendukung
-
-- Formatter untuk folder `resources`: [Prettier](https://prettier.io/)
-- Pendukung formatter untuk Blade: [Prettier Plugin Blade](https://www.npmjs.com/package/prettier-plugin-blade)
-- Pendukung formatter untuk Tailwind CSS: [Prettier Plugin Tailwind CSS](https://www.npmjs.com/package/prettier-plugin-tailwindcss/v/0.0.0-insiders.d539a72)
-- Formatter untuk file PHP: [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
-- Package manager untuk Node.js: [pnpm](https://pnpm.io/)
 
 ## Referensi
 
