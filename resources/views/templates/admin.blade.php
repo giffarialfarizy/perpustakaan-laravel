@@ -9,12 +9,12 @@
     @vite(["resources/css/app.css", "resources/js/app.js"])
   </head>
   <body class="flex min-h-screen flex-col justify-between">
-    @include("partials.header")
+    @include("organisms.header")
     <div class="flex-1 bg-green-400">
       <main class="mx-auto w-full max-w-screen-xl bg-red-400 p-4">
         @yield("content")
       </main>
     </div>
-    @include("partials.footer")
+    @include("organisms.footer")
   </body>
 </html>

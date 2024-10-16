@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,4 @@ use App\Http\Controllers\PublicController;
 */
 
 Route::get('/', [PublicController::class, 'viewHome']);
+Route::get('/admin/category/create', [CategoryController::class, 'create']);
