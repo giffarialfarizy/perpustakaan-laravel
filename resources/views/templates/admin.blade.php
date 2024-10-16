@@ -4,17 +4,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Perpustakaan</title>
+    <title>@yield("title") | Admin</title>
 
     @vite(["resources/css/app.css", "resources/js/app.js"])
   </head>
-  <body class="flex min-h-screen flex-col justify-between">
-    @include("organisms.header")
-    <div class="flex-1 bg-green-400">
-      <main class="mx-auto w-full max-w-screen-xl bg-red-400 p-4">
+  <body class="bg-indigo-50">
+    @include("organisms.sidebar")
+
+    <div class="p-4 sm:ml-64">
+      <h1 class="text-xl font-bold text-indigo-950 dark:text-white">@yield("title")</h1>
+
+      {{-- Card --}}
+      <div
+        class="mt-4 block rounded-lg border border-gray-200 bg-white p-6 shadow dark:border-gray-700 dark:bg-gray-800"
+      >
         @yield("content")
-      </main>
+      </div>
     </div>
-    @include("organisms.footer")
   </body>
 </html>
