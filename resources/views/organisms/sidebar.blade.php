@@ -1,9 +1,17 @@
+@php
+  $isDashboardActive = Request::is("admin/");
+  $isBookActive = Request::is("admin/book/*") || Request::is("admin/book");
+  $isBorrowingActive = Request::is("admin/borrowing/*") || Request::is("admin/borrowing");
+  $isCategoryActive = Request::is("admin/category/*") || Request::is("admin/category");
+  $isProfileActive = Request::is("admin/profile/*") || Request::is("admin/profile");
+@endphp
+
 <button
   data-drawer-target="separator-sidebar"
   data-drawer-toggle="separator-sidebar"
   aria-controls="separator-sidebar"
   type="button"
-  class="ms-3 mt-2 inline-flex items-center rounded-lg p-2 text-sm text-indigo-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 sm:hidden"
+  class="ms-3 mt-2 inline-flex items-center rounded-lg p-2 text-sm text-indigo-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 sm:hidden"
 >
   <span class="sr-only">Open sidebar</span>
   <svg
@@ -26,15 +34,15 @@
   class="fixed left-0 top-0 z-40 h-screen w-64 -translate-x-full transition-transform sm:translate-x-0"
   aria-label="Sidebar"
 >
-  <div class="h-full overflow-y-auto bg-white px-3 py-4 dark:bg-gray-800">
+  <div class="h-full overflow-y-auto bg-white px-3 py-4">
     <ul class="space-y-2 font-medium">
       <li>
         <a
           href="#"
-          class="{{ Request::is("admin/") ? "bg-indigo-900 text-white dark:text-white" : "text-indigo-950 hover:bg-indigo-50 dark:hover:bg-indigo-700" }} group flex items-center rounded-lg p-4"
+          class="{{ $isDashboardActive ? "bg-indigo-900 text-white" : "text-indigo-950 hover:bg-indigo-50" }} group flex items-center rounded-lg p-4"
         >
           <svg
-            class="{{ Request::is("admin/") ? "bg-indigo-900 text-white dark:text-white" : "text-gray-400 group-hover:text-indigo-900 dark:text-gray-400 dark:group-hover:text-white" }} h-5 w-5 transition duration-75"
+            class="{{ $isDashboardActive ? "bg-indigo-900 text-white" : "text-gray-400 group-hover:text-indigo-900" }} h-5 w-5 transition duration-75"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -57,10 +65,10 @@
       <li>
         <a
           href="#"
-          class="{{ Request::is("admin/borrowing/*") ? "bg-indigo-900 text-white dark:text-white" : "text-indigo-950 hover:bg-indigo-50 dark:hover:bg-indigo-700" }} group flex items-center rounded-lg p-4"
+          class="{{ $isBorrowingActive ? "bg-indigo-900 text-white" : "text-indigo-950 hover:bg-indigo-50" }} group flex items-center rounded-lg p-4"
         >
           <svg
-            class="{{ Request::is("admin/borrowing/*") ? "bg-indigo-900 text-white dark:text-white" : "text-gray-400 group-hover:text-indigo-900 dark:text-gray-400 dark:group-hover:text-white" }} h-5 w-5 transition duration-75"
+            class="{{ $isBorrowingActive ? "bg-indigo-900 text-white" : "group-hover:text-indigo-90 text-gray-400" }} h-5 w-5 transition duration-75"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -81,10 +89,10 @@
       <li>
         <a
           href="#"
-          class="{{ Request::is("admin/category/*") ? "bg-indigo-900 text-white dark:text-white" : "text-indigo-950 hover:bg-indigo-50 dark:hover:bg-indigo-700" }} group flex items-center rounded-lg p-4"
+          class="{{ $isCategoryActive ? "bg-indigo-900 text-white" : "text-indigo-950 hover:bg-indigo-50" }} group flex items-center rounded-lg p-4"
         >
           <svg
-            class="{{ Request::is("admin/category/*") ? "bg-indigo-900 text-white dark:text-white" : "text-gray-400 group-hover:text-indigo-900 dark:text-gray-400 dark:group-hover:text-white" }} h-5 w-5 transition duration-75"
+            class="{{ $isCategoryActive ? "bg-indigo-900 text-white" : "group-hover:text-indigo-90 text-gray-400" }} h-5 w-5 transition duration-75"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -105,10 +113,10 @@
       <li>
         <a
           href="#"
-          class="{{ Request::is("admin/book/*") ? "bg-indigo-900 text-white dark:text-white" : "text-indigo-950 hover:bg-indigo-50 dark:hover:bg-indigo-700" }} group flex items-center rounded-lg p-4"
+          class="{{ $isBookActive ? "bg-indigo-900 text-white" : "text-indigo-950 hover:bg-indigo-50" }} group flex items-center rounded-lg p-4"
         >
           <svg
-            class="{{ Request::is("admin/book/*") ? "bg-indigo-900 text-white dark:text-white" : "text-gray-400 group-hover:text-indigo-900 dark:text-gray-400 dark:group-hover:text-white" }} h-5 w-5 transition duration-75"
+            class="{{ $isBookActive ? "bg-indigo-900 text-white" : "text-gray-400 group-hover:text-indigo-900" }} h-5 w-5 transition duration-75"
             xmlns="http://www.w3.org/2000/svg"
             width="1.25em"
             height="1.25em"
@@ -127,14 +135,14 @@
         </a>
       </li>
     </ul>
-    <ul class="mt-4 space-y-2 border-t border-gray-200 pt-4 font-medium dark:border-gray-700">
+    <ul class="mt-4 space-y-2 border-t border-gray-200 pt-4 font-medium">
       <li>
         <a
           href="#"
-          class="{{ Request::is("admin/profile/*") ? "bg-indigo-900 text-white dark:text-white" : "text-indigo-950 hover:bg-indigo-50 dark:hover:bg-indigo-700" }} group flex items-center rounded-lg p-4"
+          class="{{ $isProfileActive ? "bg-indigo-900 text-white" : "text-indigo-950 hover:bg-indigo-50" }} group flex items-center rounded-lg p-4"
         >
           <svg
-            class="{{ Request::is("admin/profile/*") ? "bg-indigo-900 text-white dark:text-white" : "text-gray-400 group-hover:text-indigo-900 dark:text-gray-400 dark:group-hover:text-white" }} h-5 w-5 transition duration-75"
+            class="{{ $isProfileActive ? "bg-indigo-900 text-white" : "group-hover:text-indigo-90 text-gray-400" }} h-5 w-5 transition duration-75"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
             viewBox="0 0 24 24"
