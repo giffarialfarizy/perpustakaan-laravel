@@ -13,12 +13,10 @@
     @include("organisms.sidebar")
 
     <div class="p-4 sm:ml-64">
-      <h1 class="text-xl font-bold text-indigo-950 dark:text-white">@yield("title")</h1>
+      <h1 class="text-xl font-bold text-indigo-950">@yield("title")</h1>
 
       {{-- Card --}}
-      <div
-        class="mt-4 block rounded-lg border border-gray-200 bg-white p-6 shadow dark:border-gray-700 dark:bg-gray-800"
-      >
+      <div class="mt-4 block rounded-lg border border-gray-200 bg-white p-6 shadow">
         @yield("content")
       </div>
     </div>
