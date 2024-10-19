@@ -19,10 +19,18 @@ Route::get('/', [PublicController::class, 'viewHome']);
 
 // ========== ADMIN ==========
 
-// ===== Category =====
+// ===== Category CRUD =====
 // --- create ---
 Route::get('/admin/category/create', [CategoryController::class, 'create']);
 Route::post('/admin/category', [CategoryController::class, 'store']);
 
 // --- read ---
+Route::get('/admin/category/', [CategoryController::class, 'index']);
 Route::get('/admin/category/{id}', [CategoryController::class, 'show']);
+
+// --- update ---
+Route::get('/admin/category/edit/{id}', [CategoryController::class, 'edit']);
+Route::put('/admin/category/{id}', [CategoryController::class, 'update']);
+
+// --- delete ---
+Route::delete('/admin/category/{id}', [CategoryController::class, 'destroy']);
