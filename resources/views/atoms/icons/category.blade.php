@@ -1,3 +1,4 @@
+{{-- heroicons-outline: view-grid --}}
 <svg
   class="{{ $class }}"
   aria-hidden="true"

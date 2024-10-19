@@ -1,3 +1,4 @@
+{{-- heroicons-outline: selector --}}
 <svg
   class="{{ $class }}"
   aria-hidden="true"

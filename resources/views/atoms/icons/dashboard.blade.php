@@ -1,3 +1,4 @@
+{{-- heroicons-outline: chart-pie --}}
 <svg
   class="{{ $class }}"
   aria-hidden="true"

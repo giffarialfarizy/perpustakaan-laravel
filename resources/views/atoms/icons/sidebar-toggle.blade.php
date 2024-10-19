@@ -1,3 +1,4 @@
+{{-- heroicons-outline: menu-alt-2 --}}
 <svg
   class="{{ $class }}"
   aria-hidden="true"
