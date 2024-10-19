@@ -4,11 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>@yield("title") | Admin</title>
+    <title>@yield("title") | Admin Perpustakaan</title>
 
     @vite(["resources/css/app.css", "resources/js/app.js"])
   </head>
-  <body class="bg-indigo-50">
+  <body class="bg-indigo-50 text-indigo-950">
     @include("organisms.sidebar")
 
     <div class="p-4 sm:ml-64">
