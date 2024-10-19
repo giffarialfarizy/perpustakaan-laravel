@@ -16,4 +16,10 @@ use App\Http\Controllers\CategoryController;
 */
 
 Route::get('/', [PublicController::class, 'viewHome']);
+
+// ========== ADMIN ==========
+
+// ===== Category =====
+// --- create ---
 Route::get('/admin/category/create', [CategoryController::class, 'create']);
+Route::post('/admin/category', [CategoryController::class, 'store']);
