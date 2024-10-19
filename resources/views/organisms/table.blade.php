@@ -35,9 +35,9 @@
           @include(
             "molecules.table.action-body",
             [
-              "hrefView" => $action["hrefView"],
-              "hrefEdit" => $action["hrefEdit"],
-              "hrefRemove" => $action["hrefRemove"],
+              "hrefView" => $action["hrefView"] . $data->id,
+              "hrefEdit" => $action["hrefEdit"] . $data->id,
+              "hrefRemove" => $action["hrefRemove"] . $data->id,
               "actionRemove" => $action["actionRemove"],
             ]
           )
