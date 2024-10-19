@@ -38,7 +38,7 @@
               "hrefView" => $action["hrefView"] . $data->id,
               "hrefEdit" => $action["hrefEdit"] . $data->id,
               "hrefRemove" => $action["hrefRemove"] . $data->id,
-              "actionRemove" => $action["actionRemove"],
+              "actionRemove" => $action["actionRemove"] . $data->id,
             ]
           )
         @endif
