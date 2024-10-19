@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PublicController;
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PublicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +35,6 @@ Route::put('/admin/category/{id}', [CategoryController::class, 'update']);
 
 // --- delete ---
 Route::delete('/admin/category/{id}', [CategoryController::class, 'destroy']);
+
+// ===== Book CRUD =====
+Route::resource('/admin/book', BookController::class);
