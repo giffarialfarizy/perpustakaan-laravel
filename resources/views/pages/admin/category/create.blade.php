@@ -5,23 +5,20 @@
 @endsection
 
 @section("content")
-  @component("organisms.form", ["action" => "/admin/category", "method" => "post"])
-    @slot("fields")
-      @include(
-        "atoms.inputs.text-input",
-        [
-          "label" => "Nama Kategori",
-          "id" => "name",
-          "name" => "name",
-          "class" => "mb-4",
-          "placeholder" => "Novel",
-        ]
-      )
-    @endslot
+  <form action="/admin/category" method="POST">
+    @csrf
+    @include(
+      "atoms.inputs.text-input",
+      [
+        "label" => "Nama Kategori",
+        "id" => "name",
+        "name" => "name",
+        "class" => "mb-4",
+        "placeholder" => "Novel",
+      ]
+    )
 
-    @slot("buttons")
-      @include("atoms.buttons.anchor-white", ["href" => "/admin/category", "text" => "Kembali"])
-      @include("atoms.buttons.indigo", ["type" => "submit", "text" => "Tambah"])
-    @endslot
-  @endcomponent
+    @include("atoms.buttons.anchor-white", ["href" => "/admin/category", "text" => "Kembali"])
+    @include("atoms.buttons.indigo", ["type" => "submit", "text" => "Tambah"])
+  </form>
 @endsection
