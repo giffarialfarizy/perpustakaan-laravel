@@ -23,3 +23,6 @@ Route::get('/', [PublicController::class, 'viewHome']);
 // --- create ---
 Route::get('/admin/category/create', [CategoryController::class, 'create']);
 Route::post('/admin/category', [CategoryController::class, 'store']);
+
+// --- read ---
+Route::get('/admin/category/{id}', [CategoryController::class, 'show']);

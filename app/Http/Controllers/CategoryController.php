@@ -31,4 +31,11 @@ class CategoryController extends Controller
 
     return redirect('/admin/category');
   }
+
+  // ========== READ ==========
+  public function show($id)
+  {
+    $category = DB::table('categories')->find($id);
+    return view('pages.admin.category.detail', ['category' => $category]);
+  }
 }
