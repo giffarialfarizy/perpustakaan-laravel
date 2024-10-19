@@ -8,7 +8,7 @@
 
     @vite(["resources/css/app.css", "resources/js/app.js"])
   </head>
-  <body class="flex min-h-screen flex-col justify-between">
+  <body class="flex min-h-screen flex-col justify-between text-indigo-950">
     @include("organisms.header")
     <div class="flex-1 bg-green-400">
       <main class="mx-auto w-full max-w-screen-xl bg-red-400 p-4">
