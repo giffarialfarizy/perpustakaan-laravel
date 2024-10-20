@@ -38,3 +38,5 @@ Route::delete('/admin/category/{id}', [CategoryController::class, 'destroy']);
 
 // ===== Book CRUD =====
 Route::resource('/admin/book', BookController::class);
+
+Auth::routes();
