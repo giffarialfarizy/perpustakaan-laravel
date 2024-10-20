@@ -36,7 +36,7 @@
             "molecules.table.action-body",
             [
               "hrefView" => $action["hrefView"] . $data->id,
-              "hrefEdit" => $action["hrefEdit"] . $data->id,
+              "hrefEdit" => $action["hrefEdit"] . $data->id . "/edit",
               "hrefRemove" => $action["hrefRemove"] . $data->id,
               "actionRemove" => $action["actionRemove"] . $data->id,
             ]

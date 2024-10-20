@@ -30,7 +30,7 @@ Route::get('/admin/category/', [CategoryController::class, 'index']);
 Route::get('/admin/category/{id}', [CategoryController::class, 'show']);
 
 // --- update ---
-Route::get('/admin/category/edit/{id}', [CategoryController::class, 'edit']);
+Route::get('/admin/category/{id}/edit', [CategoryController::class, 'edit']);
 Route::put('/admin/category/{id}', [CategoryController::class, 'update']);
 
 // --- delete ---

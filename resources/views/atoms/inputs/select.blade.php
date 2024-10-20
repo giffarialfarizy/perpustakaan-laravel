@@ -7,7 +7,11 @@
     @if(!isset($required) || $required) required @endif
   >
     @forelse ($options as $option)
-      <option value="{{ $option->id }}">{{ $option->name }}</option>
+      @if ($option->id === $selectedOption)
+        <option value="{{ $option->id }}" selected>{{ $option->name }}</option>
+      @else
+        <option value="{{ $option->id }}">{{ $option->name }}</option>
+      @endif
     @empty
       <option value="">{{ $name }} tidak tersedia</option>
     @endforelse

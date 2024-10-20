@@ -9,5 +9,5 @@
     @if(isset($value)) value="{{ $value }}" @endif
     @if(isset($placeholder)) placeholder="{{ $placeholder }}" @endif
     @if(!isset($required) || $required) required @endif
-  ></textarea>
+  >@if (isset($value)){{ $value }}@endif</textarea>
 </div>

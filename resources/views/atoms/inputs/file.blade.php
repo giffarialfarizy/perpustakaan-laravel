@@ -1,5 +1,7 @@
 <div class="{{ $class }}">
-  <label for="{{ $id }}" class="mb-2 block text-sm font-bold text-indigo-950">{{ $label }}</label>
+  <label for="{{ $id }}" class="mb-2 block text-sm font-bold text-indigo-950">
+    {{ $isEditting ? $label . " Baru" : $label }}
+  </label>
   <input
     type="file"
     id="{{ $id }}"

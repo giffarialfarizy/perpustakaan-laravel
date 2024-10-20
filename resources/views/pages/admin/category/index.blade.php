@@ -39,7 +39,7 @@
         "action" => [
           "show" => true,
           "hrefView" => "/admin/category/",
-          "hrefEdit" => "/admin/category/edit/",
+          "hrefEdit" => "/admin/category/",
           "hrefRemove" => "/admin/category/",
           "actionRemove" => "/admin/category/",
         ],
